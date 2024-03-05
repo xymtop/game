@@ -1,6 +1,7 @@
 ﻿using Assets.Scenes.code.db;
 using Assets.Scenes.code.entity;
 using MongoDB.Driver;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,8 +24,8 @@ namespace Assets.Scenes.code.service
 
         public User Login(string username, string password)
         {
-               User user =  new User();
-            user.userName = username;
+               User user =  new();
+            user.username = username;
             user.password = password;
             FilterDefinition<User> userFilter =  MongoDBHelper.BuildNonNullPropertiesFilter<User>(user);
              List<User> users =  conn.Find<User>(TABLE_NAME, userFilter);
@@ -41,11 +42,12 @@ namespace Assets.Scenes.code.service
 
         public bool Registe(User user)
         {
+            
             if(user == null)
             {
                 return false;
             }
-
+        
             conn.InsertOne<User>(TABLE_NAME, user);
 
             return true;

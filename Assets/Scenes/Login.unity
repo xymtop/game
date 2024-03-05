@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 54597104}
   - component: {fileID: 54597103}
   - component: {fileID: 54597102}
+  - component: {fileID: 54597105}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -512,6 +513,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54597100}
   m_CullTransparentMesh: 1
+--- !u!114 &54597105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54597100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4565489e132bf4bb8a376153226388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &104867279
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +644,7 @@ GameObject:
   - component: {fileID: 163178713}
   - component: {fileID: 163178712}
   - component: {fileID: 163178711}
+  - component: {fileID: 163178714}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -740,6 +754,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163178709}
   m_CullTransparentMesh: 1
+--- !u!114 &163178714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163178709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4565489e132bf4bb8a376153226388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &199711817
 GameObject:
   m_ObjectHideFlags: 0
@@ -3916,6 +3942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663604730}
   - component: {fileID: 1663604729}
+  - component: {fileID: 1663604732}
   - component: {fileID: 1663604728}
   m_Layer: 0
   m_Name: Main Camera
@@ -3998,6 +4025,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663604732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663604727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20644980e57bf5c4f92c87b86fae2bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &1669772263
 GameObject:
   m_ObjectHideFlags: 0

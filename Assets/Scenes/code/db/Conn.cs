@@ -1,4 +1,6 @@
+using Assets.Scenes.code.entity;
 using MongoDB.Driver;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,13 +24,19 @@ public class Conn : MonoBehaviour
     {
         this.MONGO_URI = MONGO_URI;
         this.DATABASE_NAME = DATABASE_NAME;
+
+        this.client = new MongoClient(MONGO_URI);
+        this.db = this.client.GetDatabase(DATABASE_NAME);
     }
 
     public static Conn GetConn()
     {
-        if (conn == null)
+        if (Conn.conn == null)
         {
-            Conn conn = new Conn("mongodb://127.0.0.1:27017", "game");
+
+            Conn.conn = new Conn("mongodb://127.0.0.1:27017", "admin");
+            Debug.Log(conn == null);
+
         }
         return conn;
     }
@@ -38,15 +46,6 @@ public class Conn : MonoBehaviour
  */
     public IMongoDatabase GetDb()
     {
-        if (client == null)
-        {
-               client = new MongoClient(MONGO_URI);
-        }
-        if (db == null)
-        {
-                 db = client.GetDatabase(DATABASE_NAME);
-        }
-        
         return db;
     }
 
