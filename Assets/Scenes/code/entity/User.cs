@@ -7,10 +7,10 @@ namespace Assets.Scenes.code.entity
 /* user entity */
     public class User
     {
-        string id {  get; set; }
-        string userName {  get; set; }
+        public  string id {  get; set; }
+        public string userName {  get; set; }
 
-        string password { get; set; }
+        public string password { get; set; }
 
     }
 }
