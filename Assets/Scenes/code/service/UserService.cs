@@ -8,17 +8,15 @@ using UnityEngine;
 
 namespace Assets.Scenes.code.service
 {
-    public class UserService
+    public class UserService:BaseService
     {
-        private Conn conn;
+    
 
-        private const string TABLE_NAME = "user";
-        public UserService()
+        private  string TABLE_NAME = "user";
+        public UserService():base() 
         {
-            if (this.conn == null)
-            {
-                this.conn = Conn.GetConn();
-            } 
+          
+          
         }
 
 
