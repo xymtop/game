@@ -15,17 +15,17 @@ namespace Assets.Scenes.code.service
         private const string TABLE_NAME = "user";
         public UserService()
         {
-            if (conn == null)
+            if (this.conn == null)
             {
-                conn = Conn.GetConn();
+                this.conn = Conn.GetConn();
             } 
         }
 
 
-        public User Login(string username, string password)
+        public User Login(string id, string password)
         {
                User user =  new();
-            user.username = username;
+            user._id = id;
             user.password = password;
             FilterDefinition<User> userFilter =  MongoDBHelper.BuildNonNullPropertiesFilter<User>(user);
              List<User> users =  conn.Find<User>(TABLE_NAME, userFilter);
@@ -39,6 +39,21 @@ namespace Assets.Scenes.code.service
            
         }
 
+
+        public User getUser(string id)
+        {
+            User user = new();
+            user._id = id;
+            FilterDefinition<User> userFilter = MongoDBHelper.BuildNonNullPropertiesFilter<User>(user);
+            List<User> users = conn.Find<User>(TABLE_NAME, userFilter);
+
+            if (users == null || users.Count == 0)
+            {
+                return null;
+            }
+
+            return users[0];
+        }
 
         public bool Registe(User user)
         {
