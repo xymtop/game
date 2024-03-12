@@ -33,12 +33,9 @@ public class Conn : MonoBehaviour
     {
         if (Conn.conn == null)
         {
-
-            Conn.conn = new Conn("mongodb://127.0.0.1:27017", "admin");
-            Debug.Log(conn == null);
-
+            Conn.conn = new Conn("mongodb://5.tcp.cpolar.top:12624", "game");
         }
-        return conn;
+        return Conn.conn;
     }
 
 /*

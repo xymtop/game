@@ -17,14 +17,19 @@ public class TestConn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 10; i++)
+     /*   for (int i = 1; i < 10; i++)
         {
-            Console.WriteLine(i);
-            User user = new User();
-            user.username = i.ToString();
-            user.password = "derÍõ";
-            service.Registe(user);
-        }
+
+      *//*      User admin =service.getUser(i.ToString());
+            Console.WriteLine(admin);
+            System.Console.WriteLine("Hello World!");
+            //  User user = new User();
+            // user._id = i.ToString();
+            //user.username = i.ToString();
+            // user.password = "123456";
+            //service.Registe(user);*//*
+
+        }*/
     }
 
     // Update is called once per frame
