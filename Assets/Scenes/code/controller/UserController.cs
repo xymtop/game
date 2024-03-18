@@ -1,5 +1,6 @@
 ﻿using Assets.Scenes.code.entity;
 using Assets.Scenes.code.service;
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,13 @@ namespace Assets.Scenes.code
         public InputField passwordText;
 
         public Text LoginResultMsg;
+
+
+
+        public InputField registUserNameText;
+        public InputField registPasswordText;
+        public Text RegistResultMsg;
+
 
         public void Start()
         {
@@ -51,8 +59,31 @@ namespace Assets.Scenes.code
            
         }
 
-        public void UserRegister() { 
+        public void UserRegister() {
+            User user = new();
+            user.username = usernameText.text;
+            user.password = passwordText.text;
+            user._id = usernameText.text;
+            user.deleted = "0";
+            user.role = "1";
+            user.create_time = DateTime.Now.ToLocalTime().ToString();
 
+
+            UserService userService = new UserService();
+            bool flag = userService.Registe(user);
+
+            if (!flag)
+            {
+                RegistResultMsg.text = "注册失败!！！！";
+                RegistResultMsg.color = Color.red;
+                RegistResultMsg.gameObject.SetActive(true);
+            }
+            else
+            {
+                RegistResultMsg.text = "注册成功!！！！";
+                RegistResultMsg.color = Color.green;
+                RegistResultMsg.gameObject.SetActive(true);
+            }
         }
     }
 }
