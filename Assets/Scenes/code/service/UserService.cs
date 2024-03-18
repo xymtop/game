@@ -28,7 +28,7 @@ namespace Assets.Scenes.code.service
             FilterDefinition<User> userFilter =  MongoDBHelper.BuildNonNullPropertiesFilter<User>(user);
              List<User> users =  conn.Find<User>(TABLE_NAME, userFilter);
 
-            if(users==null&&users.Count == 0)
+            if(users==null||users.Count == 0)
             {
                 return null;
             }
