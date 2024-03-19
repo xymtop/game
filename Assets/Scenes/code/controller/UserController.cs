@@ -29,6 +29,7 @@ namespace Assets.Scenes.code
         
         }
 
+        [Obsolete]
         public void UserLogin()
         {
             string username =  usernameText.text;
@@ -44,29 +45,33 @@ namespace Assets.Scenes.code
             if (user == null)
             {
                 //登录失败
-                LoginResultMsg.text = "登录失败!！！！";
+                LoginResultMsg.text = "Fail!！！！";
                 LoginResultMsg.color = Color.red;
                 LoginResultMsg.gameObject.SetActive(true);
             }
             else
             {
                 //登录成功
-                LoginResultMsg.text = "登录成功!！！！";
+                LoginResultMsg.text = "Success!！！！";
                 LoginResultMsg.color = Color.green;
                 LoginResultMsg.gameObject.SetActive(true);
+
+                Application.LoadLevel(0);
             }
 
            
         }
 
         public void UserRegister() {
-            User user = new();
-            user.username = usernameText.text;
-            user.password = passwordText.text;
-            user._id = usernameText.text;
-            user.deleted = "0";
-            user.role = "1";
-            user.create_time = DateTime.Now.ToLocalTime().ToString();
+            User user = new()
+            {
+                username = usernameText.text,
+                password = passwordText.text,
+                _id = usernameText.text,
+                deleted = "0",
+                role = "1",
+                create_time = DateTime.Now.ToLocalTime().ToString()
+            };
 
 
             UserService userService = new UserService();

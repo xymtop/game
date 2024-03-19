@@ -63,10 +63,16 @@ namespace Assets.Scenes.code.service
             {
                 return false;
             }
-        
+
+       
             conn.InsertOne<User>(TABLE_NAME, user);
 
-            return true;
+            if (Login(user.username, user.password) != null)
+            {
+                return true;
+            }
+            return false;
+          
         }
     }
 }
