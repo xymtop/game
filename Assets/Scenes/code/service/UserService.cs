@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace Assets.Scenes.code.service
 {
     public class UserService
@@ -26,6 +27,8 @@ namespace Assets.Scenes.code.service
                User user =  new User();
             user.userName = username;
             user.password = password;
+           // username= input[0].text;
+            //password = input[1].text;
             FilterDefinition<User> userFilter =  MongoDBHelper.BuildNonNullPropertiesFilter<User>(user);
              List<User> users =  conn.Find<User>(TABLE_NAME, userFilter);
 
