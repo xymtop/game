@@ -3126,6 +3126,9 @@ MonoBehaviour:
   usernameText: {fileID: 1118294684}
   passwordText: {fileID: 1413269411}
   LoginResultMsg: {fileID: 490765496}
+  registUserNameText: {fileID: 0}
+  registPasswordText: {fileID: 0}
+  RegistResultMsg: {fileID: 0}
 --- !u!1 &930508836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,7 +3520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1245197154
 RectTransform:
   m_ObjectHideFlags: 0
