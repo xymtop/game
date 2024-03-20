@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    private Rigidbody rigid;//Íæ¼Ò¸ÕÌå
-    private Animator animator;//Íæ¼Ò¶¯»­»ú
-    public Transform mCamera;//Ïà»ú×é¼þ
+    private Rigidbody rigid;//ï¿½ï¿½Ò¸ï¿½ï¿½ï¿½
+    private Animator animator;//ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½ï¿½
+    public Transform mCamera;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    private Vector3 moveDir;//ÈËÎïÒÆ¶¯·½Ïò
-    private float currentVelocity = 1;//Ä¿Ç°µÄ×ªÏòËÙ¶È£¨SmoothDampAngleº¯ÊýµÄ·µ»¹²ÎÊý£©
-    private float smoothTime = 0.1f;//Íê³ÉÆ½»¬µÄÊ±¼ä£¨SmoothDampAngleº¯ÊýµÄ²ÎÊý£©
-    public float wSpeed;//ÒÆ¶¯ËÙ¶È
-    public float rSpeed;//Ðý×ªËÙ¶È
-    public float jPower;//ÌøÔ¾Á¦¶È
-    private float inputH;//Ë®Æ½ÒÆ¶¯²ÎÊý
-    private float inputV;//´¹Ö±ÒÆ¶¯²ÎÊý
-    private bool isMove;//ÊÇ·ñÒÆ¶¯
-    private bool isRun;//ÊÇ·ñ±¼ÅÜ
-    private bool isGround;//ÊÇ·ñÔÚµØÃæÉÏ
+    private Vector3 moveDir;//ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½
+    private float currentVelocity = 1;//Ä¿Ç°ï¿½ï¿½×ªï¿½ï¿½ï¿½Ù¶È£ï¿½SmoothDampAngleï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private float smoothTime = 0.1f;//ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¨SmoothDampAngleï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½
+    public float wSpeed;//ï¿½Æ¶ï¿½ï¿½Ù¶ï¿½
+    public float rSpeed;//ï¿½ï¿½×ªï¿½Ù¶ï¿½
+    public float jPower = 1.0f;//ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½ï¿½
+    private float inputH;//Ë®Æ½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½
+    private float inputV;//ï¿½ï¿½Ö±ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½
+    private bool isMove;//ï¿½Ç·ï¿½ï¿½Æ¶ï¿½
+    private bool isRun;//ï¿½Ç·ï¿½ï¿½ï¿½
+    private bool isGround;//ï¿½Ç·ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
 
     void Start()
     {
@@ -32,9 +32,9 @@ public class player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        inputH = Input.GetAxis("Horizontal");//»ñÈ¡Ë®Æ½/´¹Ö±ÒÆ¶¯²ÎÊý
+        inputH = Input.GetAxis("Horizontal");//ï¿½ï¿½È¡Ë®Æ½/ï¿½ï¿½Ö±ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½
         inputV = Input.GetAxis("Vertical");
-        animator.SetFloat("inputH", inputH);//¸üÐÂ¶¯»­»ú²ÎÊý
+        animator.SetFloat("inputH", inputH);//ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         animator.SetFloat("inputV", Mathf.Abs(inputV));
         animator.SetBool("isMove", isMove);
         animator.SetBool("isRun", isRun);
@@ -42,29 +42,29 @@ public class player : MonoBehaviour
         {
             isGround = false;
             animator.CrossFade("Jump", 0.1f);
-            rigid.AddForce(0, jPower, 0);//¸ø¸ÕÌåÏòÉÏµÄÁ¦
-        }//¸üÐÂÌøÔ¾¶¯»­
+            rigid.AddForce(0, jPower, 0);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½
+        }//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½ï¿½
         if (inputH != 0 || inputV != 0)
         {
             isMove = true;
             transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, (Mathf.Atan2(inputH, inputV) * Mathf.Rad2Deg + mCamera.eulerAngles.y), ref currentVelocity, smoothTime, rSpeed, Time.deltaTime);
-        }//¸Ä±äÈËÎï³¯Ïò
+        }//ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï³¯ï¿½ï¿½
         else
         {
             isMove = false;
-        }//¸üÐÂÒÆ¶¯×´Ì¬
+        }//ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½×´Ì¬
         if (Input.GetKey(KeyCode.LeftShift))
         {
             wSpeed = 6;
             isRun = true;
-        }//¸üÐÂ±¼ÅÜ×´Ì¬
+        }//ï¿½ï¿½ï¿½Â±ï¿½ï¿½ï¿½×´Ì¬
         else
         {
             wSpeed = 3;
             isRun = false;
         }
         moveDir = mCamera.TransformDirection(inputH, 0, inputV);
-        rigid.MovePosition(transform.position + new Vector3(moveDir.x, 0, moveDir.z) * wSpeed * Time.fixedDeltaTime);//ÒÆ¶¯ÈËÎï
+        rigid.MovePosition(transform.position + new Vector3(moveDir.x, 0, moveDir.z) * wSpeed * Time.fixedDeltaTime);//ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -75,7 +75,7 @@ public class player : MonoBehaviour
             {
                 isGround = true;
             }
-        }//ÅÐ¶ÏÊÇ·ñ½ÓµØ
+        }//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Óµï¿½
     }
             
 }
