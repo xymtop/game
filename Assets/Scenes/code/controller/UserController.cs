@@ -79,13 +79,13 @@ namespace Assets.Scenes.code
 
             if (!flag)
             {
-                RegistResultMsg.text = "注册失败!！！！";
+                RegistResultMsg.text = "Fail!！！！";
                 RegistResultMsg.color = Color.red;
                 RegistResultMsg.gameObject.SetActive(true);
             }
             else
             {
-                RegistResultMsg.text = "注册成功!！！！";
+                RegistResultMsg.text = "Success!！！！";
                 RegistResultMsg.color = Color.green;
                 RegistResultMsg.gameObject.SetActive(true);
             }
