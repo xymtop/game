@@ -45,7 +45,11 @@
       }
     },
     "com.unity.ide.rider": {
+<<<<<<< HEAD
       "version": "3.0.25",
+=======
+      "version": "3.0.26",
+>>>>>>> 17550c0bda28bfb66bd2e2b7c507a4b666f3fee9
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -54,7 +58,11 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.ide.visualstudio": {
+<<<<<<< HEAD
       "version": "2.0.21",
+=======
+      "version": "2.0.22",
+>>>>>>> 17550c0bda28bfb66bd2e2b7c507a4b666f3fee9
       "depth": 0,
       "source": "registry",
       "dependencies": {
