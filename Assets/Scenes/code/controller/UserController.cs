@@ -34,10 +34,6 @@ namespace Assets.Scenes.code
         {
             string username =  usernameText.text;
             string password = passwordText.text;
-
-
-     
-         
             UserService userService = new UserService();
             User user =   userService.Login(username, password);
 
