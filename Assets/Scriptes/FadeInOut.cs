@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class FadeInOut : MonoBehaviour
 {
-    public float fadeSpeed = 1.5f;
+    public float fadeSpeed = 1.0f;
     //是否开启淡入淡出效果
     private bool sceneStarting = true;
     private RawImage rawImage;
