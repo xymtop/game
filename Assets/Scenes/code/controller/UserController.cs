@@ -54,8 +54,6 @@ namespace Assets.Scenes.code
 
                 Application.LoadLevel(0);
             }
-
-           
         }
 
         public void UserRegister() {
