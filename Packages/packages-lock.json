@@ -7,7 +7,11 @@
       "dependencies": {}
     },
     "com.unity.burst": {
+<<<<<<< HEAD
+      "version": "1.8.8",
+=======
       "version": "1.8.9",
+>>>>>>> 4b764a3bc6ea85aba5236f3da677719eee504bc8
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -41,8 +45,13 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
+<<<<<<< HEAD
+        "com.unity.ide.visualstudio": "2.0.18",
+        "com.unity.ide.rider": "3.0.24",
+=======
         "com.unity.ide.visualstudio": "2.0.21",
         "com.unity.ide.rider": "3.0.25",
+>>>>>>> 4b764a3bc6ea85aba5236f3da677719eee504bc8
         "com.unity.ide.vscode": "1.2.5",
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.performance.profile-analyzer": "1.2.2",
@@ -51,7 +60,11 @@
       }
     },
     "com.unity.ide.rider": {
+<<<<<<< HEAD
+      "version": "3.0.25",
+=======
       "version": "3.0.26",
+>>>>>>> 17550c0bda28bfb66bd2e2b7c507a4b666f3fee9
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -60,7 +73,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
+<<<<<<< HEAD
+      "version": "2.0.21",
+=======
       "version": "2.0.22",
+>>>>>>> 17550c0bda28bfb66bd2e2b7c507a4b666f3fee9
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -90,7 +107,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "14.0.9",
+      "version": "14.0.8",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
@@ -111,18 +128,18 @@
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.modules.terrain": "1.0.0",
-        "com.unity.render-pipelines.core": "14.0.9",
-        "com.unity.shadergraph": "14.0.9",
-        "com.unity.visualeffectgraph": "14.0.9",
-        "com.unity.render-pipelines.high-definition-config": "14.0.9"
+        "com.unity.render-pipelines.core": "14.0.8",
+        "com.unity.shadergraph": "14.0.8",
+        "com.unity.visualeffectgraph": "14.0.8",
+        "com.unity.render-pipelines.high-definition-config": "14.0.8"
       }
     },
     "com.unity.render-pipelines.high-definition-config": {
-      "version": "14.0.9",
+      "version": "14.0.8",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "14.0.9"
+        "com.unity.render-pipelines.core": "14.0.8"
       }
     },
     "com.unity.render-pipelines.universal": {
@@ -132,8 +149,13 @@
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
         "com.unity.burst": "1.8.4",
+<<<<<<< HEAD
+        "com.unity.render-pipelines.core": "14.0.8",
+        "com.unity.shadergraph": "14.0.8"
+=======
         "com.unity.render-pipelines.core": "14.0.9",
         "com.unity.shadergraph": "14.0.9"
+>>>>>>> 4b764a3bc6ea85aba5236f3da677719eee504bc8
       }
     },
     "com.unity.searcher": {
@@ -155,7 +177,7 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "14.0.9",
+        "com.unity.render-pipelines.core": "14.0.8",
         "com.unity.searcher": "4.9.2"
       }
     },
@@ -211,12 +233,12 @@
       }
     },
     "com.unity.visualeffectgraph": {
-      "version": "14.0.9",
+      "version": "14.0.8",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.shadergraph": "14.0.9",
-        "com.unity.render-pipelines.core": "14.0.9"
+        "com.unity.shadergraph": "14.0.8",
+        "com.unity.render-pipelines.core": "14.0.8"
       }
     },
     "com.unity.visualscripting": {

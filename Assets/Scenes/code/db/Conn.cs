@@ -33,7 +33,11 @@ public class Conn : MonoBehaviour
     {
         if (Conn.conn == null)
         {
+<<<<<<< HEAD
+            Conn.conn = new Conn("mongodb://12.tcp.cpolar.top:12691", "game");
+=======
             Conn.conn = new Conn("mongodb://7.tcp.cpolar.top:11524", "game");
+>>>>>>> 17550c0bda28bfb66bd2e2b7c507a4b666f3fee9
         }
         return Conn.conn;
     }

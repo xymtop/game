@@ -5,6 +5,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 namespace Assets.Scenes.code
 {
@@ -53,6 +54,7 @@ namespace Assets.Scenes.code
                 LoginResultMsg.gameObject.SetActive(true);
 
                 Application.LoadLevel(0);
+            
             }
         }
 

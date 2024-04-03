@@ -1,0 +1,4 @@
+repository "game2@wechat_os_qy0zqf3s5p82b0w3flrrgkrja@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
