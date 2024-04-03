@@ -4,9 +4,9 @@ using UnityEngine;
 namespace Assets.Scenes.code.service
 {
     public class BaseService 
-    {
+    {        
         public Conn conn;
-
+        
        
 
         public BaseService()
