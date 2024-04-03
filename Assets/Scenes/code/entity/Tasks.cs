@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 namespace Assets.Scenes.code.entity
+{
 public class Tasks 
 {
    public int Id { get; set; } 
-public srting name { get; set; } 
-public srting descriotion { get; set; } 
-public srting reward { get; set; } 
-public srting status { get; set; } 
+public string name { get; set; }
+public string descriotion { get; set; }
+public string reward { get; set; }
+public string status { get; set; }
+}
 }
